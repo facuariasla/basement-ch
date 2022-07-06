@@ -11,18 +11,24 @@ const clothesData = [
     clothename: "Black t-shirt",
     price: "7.95",
     src: shirt,
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint doloremque illum reprehenderit vitae dolore.",
   },
   {
     id: Math.random() * 9999,
     clothename: "Black hoodie",
     price: "13",
     src: hoodie,
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat cupiditate laboriosam laborum.",
   },
   {
     id: Math.random() * 9999,
     clothename: "Black cap",
     price: "23",
     src: cap,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste ex ducimus assumenda.",
   },
 ];
 

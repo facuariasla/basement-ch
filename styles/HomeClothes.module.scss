@@ -23,6 +23,7 @@
     transform: translateX(100%);
     // animation: move 10s linear infinite;
     animation: scrollText 15s infinite linear;
+
       /* infinite make reapeat the animation indefinitely */
     ;
 
@@ -35,7 +36,7 @@
         transform: translateX(-50%);
       }
     }
-
+ 
     @media screen and (max-width: 768px) {
       font-size: 16px;
     }
@@ -121,7 +122,6 @@
     justify-items: center;
     justify-content: center;
     padding: 0 3rem 0 3rem;
-
   }
 }
 

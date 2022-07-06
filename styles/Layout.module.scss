@@ -21,6 +21,10 @@
 
   div {
     .baselogo {
+      transition: all .3s;
+      &:hover{
+        color: rgb(187, 187, 187);
+      }
       @media screen and (max-width: 768px) {
         display: none;
       }
@@ -54,7 +58,12 @@
     border-radius: 30px;
     height: 40px;
     width: 100px;
+    transition: all 0.3s;
     cursor: pointer;
+    &:hover{
+      border: 2px solid rgb(196, 196, 196);
+      color: rgb(187, 187, 187);
+    }
   }
 }
 
