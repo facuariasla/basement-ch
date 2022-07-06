@@ -28,10 +28,12 @@ const clothesData = [
 
 const Clothes = () => {
   return (
-    <div className={styles.clothes_container}>
-      {clothesData?.map((el) => (
-        <ClotheCard productData={el} key={el.id}/>
-      ))}
+    <div className={styles.clothes}>
+      <div className={styles.clothes_container}>
+        {clothesData?.map((el) => (
+          <ClotheCard productData={el} key={el.id} />
+        ))}
+      </div>
     </div>
   );
 };
