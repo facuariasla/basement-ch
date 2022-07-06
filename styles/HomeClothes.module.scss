@@ -25,14 +25,23 @@
 
 // ///////////////////
 .clothe_card{
-  width: 300px;
+  width: 250px;
   height: 350px;
-
+  font-size: 14px;
 }
-.clothe_card .img_cont{
+.img_container{
+  width: auto; 
+  height: auto;
+  cursor: pointer;
+}
+.clothe_card .img_background{
   height: 90%;
   background: rgb(24,24,24);
   background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(0,0,0,1) 100%);
+  border-bottom: 2px solid $colorbasement;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clothe_card .description{
@@ -46,11 +55,13 @@
 }
 
 .clothes_container{
-  width: 100%;
+  max-width: 1280px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  // grid-template-columns: repeat(autofill, minmax(300px, 1fr));
-  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 280px);
+  // grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: auto;
+  justify-items: center;
+
 }
 
 ///// FOOTER
