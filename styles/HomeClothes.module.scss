@@ -9,22 +9,22 @@
   overflow-x: hidden;
   white-space: nowrap;
 
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
+
   p {
     margin: 0;
     text-overflow: ellipsis;
     font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .divider {
-    height: 40px;
-
-    p {
+    @media screen and (max-width: 768px) {
       font-size: 16px;
+
     }
+
   }
 }
+
 
 // CARD
 .clothe_card {
