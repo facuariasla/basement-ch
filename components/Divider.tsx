@@ -9,6 +9,24 @@ const Divider = () => {
         A man can't have enough basement swag —
         A man can't have enough basement swag —
         A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+        A man can't have enough basement swag —
+
       </p>
     </div>
   )

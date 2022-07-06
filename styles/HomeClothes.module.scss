@@ -22,7 +22,7 @@
     width: 100%;
     transform: translateX(100%);
     // animation: move 10s linear infinite;
-    animation: scrollText 15s infinite linear;
+    animation: scrollText 20s infinite linear;
 
       /* infinite make reapeat the animation indefinitely */
     ;
@@ -33,7 +33,7 @@
       }
 
       to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
       }
     }
  
