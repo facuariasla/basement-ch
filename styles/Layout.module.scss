@@ -1,10 +1,4 @@
-$fontsize-standar: 24px;
-$colorbasement: white;
-$titles-size-desk: 12rem;
-$titles-size-tablet: 10rem;
-$titles-size-tablet-mini: 7rem;
-$titles-size-mobile: 4rem;
-$titles-size-mobile-mini: 3rem;
+@import "colors";
 
 .layout{
   width: 100%;
@@ -31,6 +25,7 @@ $titles-size-mobile-mini: 3rem;
 @media screen and (max-width: 768px) {
   .b_icon{
     display: flex;
+    
   }
   .baselogo{
     display: none;
@@ -54,12 +49,13 @@ $titles-size-mobile-mini: 3rem;
 
 // ///////////////////////////////////////////
 .titles_container{
-  padding: 1.5rem 0 1.5rem 0;
+  padding: 2rem 0 1.5rem 0;
 }
 .home_title{
   font-size: $titles-size-desk;
   text-align: center;
   margin: 0;
+  line-height: 9rem;
 }
 
 .home_title2{
@@ -69,22 +65,28 @@ $titles-size-mobile-mini: 3rem;
   -webkit-text-stroke: 2px white; /* width and color */
   margin: 0;
   display: inline;
+  line-height: 10rem;
+
 }
 @media screen and (max-width: 1300px) {
   .home_title{
     font-size: $titles-size-tablet;
+
   }
   .home_title2{
     font-size: $titles-size-tablet;
-
   }
 }
 @media screen and (max-width: 1100px) {
   .home_title{
     font-size:$titles-size-tablet-mini;
+    line-height:6rem;
+
   }
   .home_title2{
     font-size: $titles-size-tablet-mini;
+    line-height:6rem;
+
 
   }
 }
@@ -92,9 +94,12 @@ $titles-size-mobile-mini: 3rem;
 @media screen and (max-width: 768px) {
   .home_title{
     font-size:$titles-size-mobile;
+    line-height:normal;
   }
   .home_title2{
     font-size: $titles-size-mobile;
+    line-height:normal;
+
   }
   .icons{
     display: none;

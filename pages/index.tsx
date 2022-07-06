@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Divider from '../components/Divider'
 import Header from '../components/Header'
 import HomeTitle from '../components/HomeTitle'
 import Layout from '../components/Layout'
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
         <Header/>
         <HomeTitle/>
       </Layout>
+      <Divider/>
     </div>
   )
 }
