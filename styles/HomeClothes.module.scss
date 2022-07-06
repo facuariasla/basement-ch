@@ -17,6 +17,18 @@
     margin: 0;
     text-overflow: ellipsis;
     font-size: 20px;
+    display: block; /* Important to give the content a width */
+    width: 100%;
+    transform: translateX(100%); 
+    animation: move 5s linear infinite /* infinite make reapeat the animation indefinitely */;
+    @keyframes move {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-50%, 0);
+      }
+    }
     @media screen and (max-width: 768px) {
       font-size: 16px;
     }
