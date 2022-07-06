@@ -17,18 +17,25 @@
     margin: 0;
     text-overflow: ellipsis;
     font-size: 20px;
-    display: block; /* Important to give the content a width */
+    display: block;
+    /* Important to give the content a width */
     width: 100%;
-    transform: translateX(100%); 
-    animation: move 5s linear infinite /* infinite make reapeat the animation indefinitely */;
-    @keyframes move {
-      0% {
-        transform: translate(0, 0);
+    transform: translateX(100%);
+    // animation: move 10s linear infinite;
+    animation: scrollText 15s infinite linear;
+      /* infinite make reapeat the animation indefinitely */
+    ;
+
+    @keyframes scrollText {
+      from {
+        transform: translateX(0%);
       }
-      100% {
-        transform: translate(-50%, 0);
+
+      to {
+        transform: translateX(-50%);
       }
     }
+
     @media screen and (max-width: 768px) {
       font-size: 16px;
     }
@@ -113,6 +120,8 @@
     grid-auto-rows: auto;
     justify-items: center;
     justify-content: center;
+    padding: 0 3rem 0 3rem;
+
   }
 }
 
