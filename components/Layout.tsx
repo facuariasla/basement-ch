@@ -2,9 +2,11 @@ import Head from 'next/head'
 import React from 'react'
 import styles from '../styles/Layout.module.scss';
 
+
 const Layout = ({children}:any) => {
+
   return (
-    <div >
+    <div>
       <Head>
         <title>FA Basement Challenge</title>
       </Head>

@@ -3,16 +3,17 @@ import { useState } from "react";
 import { RecoilRoot } from "recoil";
 import Clothes from "../components/Clothes";
 import Divider from "../components/Divider";
-import DrawerCart from "../components/DrawerCart";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HomeTitle from "../components/HomeTitle";
 import Layout from "../components/Layout";
 
+
+
 const Home: NextPage = () => {
   return (
     <RecoilRoot>
-      <div>
+      <div >
         <Layout>
           <Header />
           <HomeTitle />
