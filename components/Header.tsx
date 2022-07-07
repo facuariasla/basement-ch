@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import styles from "../styles/Layout.module.scss";
@@ -8,8 +8,14 @@ import eye from "../public/assets/eye-icon.svg";
 import fourk from "../public/assets/4k-icon.svg";
 import warn from "../public/assets/warn-icon.svg";
 import bicon from "../public/assets/b-icon.svg";
+import DrawerCart from "./DrawerCart";
+
+import { useRecoilState } from "recoil";
+import { drawerState } from "../utils/recoil";
 
 const Header = () => {
+  const [cartOpen, setCartOpen] = useRecoilState(drawerState);
+
   return (
     <header className={styles.header}>
         <div>
@@ -25,7 +31,8 @@ const Header = () => {
           <Image src={fourk} />
           <Image src={warn} />
         </nav>
-        <button className={styles.button_header}>CART (0)</button>
+        {cartOpen && <DrawerCart/>}
+        <button className={styles.button_header} onClick={()=>setCartOpen(true)}>CART (0)</button>
     </header>
   );
 };
