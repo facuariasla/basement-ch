@@ -36,7 +36,9 @@ const DrawerCart = () => {
           <p>$0.00</p>
         </div>
         <div className={styles.cart_checkout}>
-          <p>CHECKOUT</p>
+          <div>
+            <p>CHECKOUT</p>
+          </div>
         </div>
       </div>
     </div>

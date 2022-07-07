@@ -39,9 +39,24 @@ $cart_mobile: 550px;
     .topbtns {
       display: flex;
       justify-content: flex-end;
+      transition: all .2s;
 
       nav {
         cursor: pointer;
+        display: inline-block;
+
+        &::after {
+          content: '';
+          width: 0px;
+          height: 1px;
+          display: block;
+          background: white;
+          transition: 300ms;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
 
@@ -291,9 +306,28 @@ $cart_mobile: 550px;
         cursor: pointer;
       }
 
-      p {
-        margin: 0;
+      div {
+        display: inline-block;
+
+        &::after {
+          content: '';
+          width: 0px;
+          height: 1px;
+          display: block;
+          background: white;
+          transition: 300ms;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        p {
+          margin: 0;
+        }
       }
+
+
 
       @media screen and (max-width: $cart_mobile) {
         padding: .5rem;
