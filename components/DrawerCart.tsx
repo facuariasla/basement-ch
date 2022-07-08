@@ -27,6 +27,7 @@ const DrawerCart = () => {
         {/* card container */}
         <div className={styles.cards_container}>
           <CardCart/>
+          
         </div>
       </div>
 

@@ -4,23 +4,24 @@ import styles from "../styles/HomeClothes.module.scss";
 import addtocart from "../public/assets/addtocart.svg";
 import { useRecoilState } from "recoil";
 import { cartState } from "../utils/recoil";
+import type { Inventory } from "../utils/types";
 
 // Datos de la ropa van como props
 
 const ClotheCard = ({ productData }: any) => {
   const [cart, setCart] = useRecoilState(cartState);
-  const [items, setItems] = useState<any>([]);
 
-  const itemAdded = (el: any) => {
-    console.log("productId ", el.target.alt);
-    setItems([...items, el.target.alt]);
-    console.log(items);
-  };
+  const addItem = (productData:any) => {
+    console.log(cart)
+    console.log(productData)
+  
+  }
 
   return (
     <div key={productData.id} className={styles.clothe_card}>
       <div
         className={styles.img_background}
+        onClick={(e: any)=>addItem(e)}
       >
         <div className={styles.img_container}>
           <Image
@@ -28,7 +29,6 @@ const ClotheCard = ({ productData }: any) => {
             width={900}
             objet-fit="cover"
             alt={productData.productId}
-            onClick={(e) => itemAdded(e)}
           />
         </div>
         <div className={styles.addtocart}>
@@ -37,7 +37,6 @@ const ClotheCard = ({ productData }: any) => {
             width={200}
             objet-fit="cover"
             alt={productData.productId}
-            onClick={(productData) => itemAdded(productData)}
           />
         </div>
       </div>
