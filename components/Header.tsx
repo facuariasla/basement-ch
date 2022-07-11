@@ -19,8 +19,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
         <div>
-          <a href="https://basement.studio/" target='_blank' className={styles.baselogo}>basement</a>
-          <a href="https://basement.studio/" target='_blank' className={styles.b_icon}>
+          <a href="https://basement.studio/" target='_blank' rel="noreferrer" className={styles.baselogo}>basement</a>
+          <a href="https://basement.studio/" target='_blank' rel="noreferrer" className={styles.b_icon}>
             <Image src={bicon} height={60} width={60}/>
           </a>
         </div>
