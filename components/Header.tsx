@@ -11,7 +11,7 @@ import bicon from "../public/assets/b-icon.svg";
 import DrawerCart from "./DrawerCart";
 
 import { useRecoilState } from "recoil";
-import { drawerState } from "../utils/recoil";
+import { drawerState } from "../recoil";
 
 const Header = () => {
   const [cartOpen, setCartOpen] = useRecoilState(drawerState);

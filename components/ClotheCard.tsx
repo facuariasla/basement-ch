@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/HomeClothes.module.scss";
 import addtocart from "../public/assets/addtocart.svg";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { cartCardState, cartState, inventoryState } from "../utils/recoil";
+import { cartCardState, cartState, inventoryState } from "../recoil";
 import type { Inventory } from "../utils/types";
 
 // Datos de la ropa van como props

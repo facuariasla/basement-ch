@@ -6,10 +6,10 @@ import {
   useRecoilValue,
 } from "recoil";
 
-import hoodie from "../public/assets/hoodie.png";
-import shirt from "../public/assets/shirt.png";
-import cap from "../public/assets/cap.png";
-import type { Inventory } from "./types";
+import hoodie from "./public/assets/hoodie.png";
+import shirt from "./public/assets/shirt.png";
+import cap from "./public/assets/cap.png";
+import type { Inventory } from "./utils/types";
 
 const clothesData = [
   {
@@ -18,8 +18,7 @@ const clothesData = [
     clothename: "Black t-shirt",
     price: 7.95,
     src: shirt,
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     stock: 10,
   },
   {
@@ -28,8 +27,7 @@ const clothesData = [
     clothename: "Black hoodie",
     price: 13,
     src: hoodie,
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     stock: 12,
   },
   {
@@ -38,8 +36,7 @@ const clothesData = [
     clothename: "Black cap",
     price: 23,
     src: cap,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     stock: 8,
   },
 ];
@@ -75,7 +72,7 @@ export const cartCardState = atom({
 
 export const cardCartProccesed = selector({
   key: "cardCartProccesed",
-  get: ({ get }:any) => {
+  get: ({ get }: any) => {
     const filter = get(cartCardState);
     const data = Object.keys(filter).map((key, index) => filter[key]);
 
@@ -83,19 +80,25 @@ export const cardCartProccesed = selector({
   },
 });
 
-export const totalState= selector({
-  key: 'totalState',
-  get: ({get}) => {
-    const cart = get(cartState);
+export const totalState = selector({
+  key: "totalState",
+  get: ({ get }) => {
+    const cart: any = get(cartState);
     const inventory = get(inventoryState);
 
-    // VER ME TIRRA ERROR ESTA WEA:
-    // const newData = inventory.map((item)=> {
-    //   return {
-    //     id: item.id,
-    //     subtotal: item.price * cart[item.id],
-    //   }
-    // });
 
-  }
-})
+    const totalItem: any = inventory.map((item) => {
+      return { [item.id]: item.price * cart[item.id] };
+    });
+  },
+});
+
+export const fullTotalCart = selector({
+  key: "totalState",
+  get: ({ get }) => {
+    const subtotal: any = get(totalState);
+    // Devuelve un array con los items comprados, y con el subtotal de cada uno
+
+    const total = subtotal.reduce((acc: any, el: any) => acc + el, 0);
+  },
+});

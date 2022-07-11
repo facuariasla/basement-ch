@@ -8,7 +8,7 @@ import {
   cartState,
   drawerState,
   inventoryState,
-} from "../utils/recoil";
+} from "../recoil";
 import CardCart from "./CardCart";
 import Image from "next/image";
 

@@ -3,7 +3,7 @@ import ClotheCard from "./ClotheCard";
 import styles from "../styles/HomeClothes.module.scss";
 
 import { useRecoilValue } from "recoil";
-import { inventoryState } from "../utils/recoil";
+import { inventoryState } from "../recoil";
 
 const Clothes = () => {
   // selector de recoil hace 'peticion' a la API y trae inventario
