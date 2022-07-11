@@ -1,12 +1,16 @@
 import React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styles from "../styles/Cart.module.scss";
-import { cartCardState, cartState, inventoryState } from "../recoil";
+import { cartCardState, cartState, inventoryState, totalState } from "../recoil";
 
 const CardCart = () => {
   const inventory = useRecoilValue(inventoryState);
   const [cart, setCart] = useRecoilState<any>(cartState);
   const [cartCard, setCartCard] = useRecoilState<any>(cartCardState);
+
+  const subtotalItem = useRecoilValue(totalState);
+
+
 
   const viewData = () => {
     const data = inventory?.filter((el) => cart[el.id]);

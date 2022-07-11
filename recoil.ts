@@ -80,25 +80,31 @@ export const cardCartProccesed = selector({
   },
 });
 
-export const totalState = selector({
-  key: "totalState",
-  get: ({ get }) => {
-    const cart: any = get(cartState);
-    const inventory = get(inventoryState);
+// export const totalState = selector({
+//   key: "totalState",
+//   get: ({ get }) => {
+//     const cart: any = get(cartState);
+//     const inventory = get(inventoryState);
 
+//     // retorna un array de objetos 
+//     const subtotal:any = inventory.map((item)=> {
+//       return {
+//         id: item.id,
+//         subtotal: item.price * cart[item.id]
+//       }
+//     })
 
-    const totalItem: any = inventory.map((item) => {
-      return { [item.id]: item.price * cart[item.id] };
-    });
-  },
-});
+//     return subtotal
 
-export const fullTotalCart = selector({
-  key: "totalState",
-  get: ({ get }) => {
-    const subtotal: any = get(totalState);
-    // Devuelve un array con los items comprados, y con el subtotal de cada uno
+//   },
+// });
 
-    const total = subtotal.reduce((acc: any, el: any) => acc + el, 0);
-  },
-});
+// export const fullTotalCart = selector({
+//   key: "fullTotalCart",
+//   get: ({ get }) => {
+//     const subtotal: any = get(totalState);
+//     // Devuelve un number total de la suma de los subtotales
+//     const total = subtotal.reduce((acc: any, el: any) => acc + el.subtotal, 0);
+//     return total
+//   },
+// });

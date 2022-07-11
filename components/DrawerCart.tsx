@@ -7,9 +7,7 @@ import {
   cartCardState,
   cartState,
   drawerState,
-  inventoryState,
 } from "../recoil";
-import CardCart from "./CardCart";
 import Image from "next/image";
 
 // Este componente recibe la data del carrito
@@ -21,6 +19,8 @@ const DrawerCart = () => {
 
   const [cart, setCart] = useRecoilState<any>(cartState);
   const [cartCard, setCartCard] = useRecoilState<any>(cartCardState);
+
+
 
   const viewData = () => {
     console.log("Cards: ", cardsArray);
