@@ -25,11 +25,11 @@ const Header = () => {
           </a>
         </div>
         <nav className={styles.icons}>
-          <Image src={circle} />
-          <Image src={hd} />
-          <Image src={eye} />
-          <Image src={fourk} />
-          <Image src={warn} />
+          <Image alt='circle' src={circle} />
+          <Image alt='hd' src={hd} />
+          <Image alt='eye' src={eye} />
+          <Image alt='fourk' src={fourk} />
+          <Image alt='warn' src={warn} />
         </nav>
         {cartOpen && <DrawerCart/>}
         <button className={styles.button_header} onClick={()=>setCartOpen(true)}>CART (0)</button>

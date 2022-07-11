@@ -64,7 +64,7 @@ const DrawerCart = () => {
             <div key={card.id} className={styles.item_card}>
               <div className={styles.card_img_container} onClick={viewData}>
                 <div>
-                  <Image src={card.src} />
+                  <Image src={card.src} alt='imagerandom'/>
                 </div>
               </div>
 
